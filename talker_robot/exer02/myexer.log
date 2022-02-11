@@ -1,0 +1,18 @@
+2020-07-18 10:18:23,699 - DEBUG: Building prefix dict from the default dictionary ...
+2020-07-18 10:18:23,700 - DEBUG: Loading model from cache C:\Users\dell\AppData\Local\Temp\jieba.cache
+2020-07-18 10:18:24,261 - DEBUG: Loading model cost 0.562 seconds.
+2020-07-18 10:18:24,261 - DEBUG: Prefix dict has been built successfully.
+2020-07-18 10:18:24,676 - INFO: POST http://119.3.65.142:9200/myexer01/exer01/_search [status:200 request:0.036s]
+2020-07-18 10:18:24,676 - INFO: moduleId="search_scense_name_by_type", keyword="[]"
+2020-07-18 10:18:44,070 - INFO: POST http://119.3.65.142:9200/myexer01/exer01/_search [status:200 request:0.053s]
+2020-07-18 10:18:44,071 - INFO: moduleId="search_scense_address_by_name", keyword="ม้าþหย"
+2020-07-18 10:19:00,745 - INFO: POST http://119.3.65.142:9200/myexer02/exer02/_search [status:200 request:0.042s]
+2020-07-18 10:19:00,745 - INFO: moduleId="search_scense_ticket_by_name", keyword="ม้าþหย"
+2020-07-18 10:19:30,176 - INFO: POST http://119.3.65.142:9200/myexer02/exer02/_search [status:200 request:0.041s]
+2020-07-18 10:19:30,176 - INFO: moduleId="search_scense_ticket_by_name", keyword="ม้าþหย"
+2020-07-18 10:20:17,408 - INFO: POST http://119.3.65.142:9200/myexer01/exer01/_search [status:200 request:0.049s]
+2020-07-18 10:20:17,408 - INFO: moduleId="search_scense_address_by_name", keyword="ม้าþหย"
+2020-07-18 10:22:51,267 - INFO: POST http://119.3.65.142:9200/myexer01/exer01/_search [status:200 request:0.039s]
+2020-07-18 10:22:51,267 - INFO: moduleId="search_scense_address_by_name", keyword="ม้าþหย"
+2020-07-18 10:27:26,679 - INFO: POST http://119.3.65.142:9200/myexer01/exer01/_search [status:200 request:0.042s]
+2020-07-18 10:27:26,679 - INFO: moduleId="search_scense_address_by_name", keyword="ม้าþหย"

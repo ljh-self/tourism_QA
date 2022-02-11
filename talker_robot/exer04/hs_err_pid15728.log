@@ -1,0 +1,282 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 8388608 bytes for Failed to commit area from 0x0000023853ba0000 to 0x00000238543a0000 of length 8388608.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/os/windows/os_windows.cpp:3315), pid=15728, tid=20628
+#
+# JRE version:  (14.0.1+7) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (14.0.1+7, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Xms512m -Xmx8g 
+
+Host: Intel(R) Core(TM) i5-8500 CPU @ 3.00GHz, 6 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.928)
+Time: Thu May 20 17:33:43 2021 中国标准时间 elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002383864c000):  JavaThread "Unknown thread" [_thread_in_vm, id=20628, stack(0x0000009f8ae00000,0x0000009f8aff0000)]
+
+Stack: [0x0000009f8ae00000,0x0000009f8aff0000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5f840a]
+V  [jvm.dll+0x741e4a]
+V  [jvm.dll+0x7435ff]
+V  [jvm.dll+0x743c43]
+V  [jvm.dll+0x20d288]
+V  [jvm.dll+0x5f57ba]
+V  [jvm.dll+0x5ea615]
+V  [jvm.dll+0x2c7e9c]
+V  [jvm.dll+0x2c7cd2]
+V  [jvm.dll+0x2cdbbc]
+V  [jvm.dll+0x31400b]
+V  [jvm.dll+0x313720]
+V  [jvm.dll+0x2a092a]
+V  [jvm.dll+0x2a1a79]
+V  [jvm.dll+0x71f718]
+V  [jvm.dll+0x321c44]
+V  [jvm.dll+0x700b0c]
+V  [jvm.dll+0x392dff]
+V  [jvm.dll+0x394e71]
+C  [_jpype.cp36-win_amd64.pyd+0x2453d]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffe11ec3078, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000238386c7000 GCTaskThread "GC Thread#0" [stack: 0x0000009f8bf70000,0x0000009f8c160000] [id=19388]
+  0x00000238386e7800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000009f8c160000,0x0000009f8c350000] [id=4700]
+  0x00000238386e8800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000009f8c350000,0x0000009f8c540000] [id=20508]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffe116f1257]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000023838648750] Heap_lock - owner thread: 0x000002383864c000
+
+Heap address: 0x0000000600000000, size: 8192 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.005 Loaded shared library C:\Program Files\Java\jdk-14.0.1\bin\java.dll
+Event: 0.005 Loaded shared library C:\Program Files\Java\jdk-14.0.1\bin\zip.dll
+
+
+Dynamic libraries:
+0x000000001cc60000 - 0x000000001cc7b000 	D:\Anaconda3\envs\tensorflow\python.exe
+0x00007ffe43850000 - 0x00007ffe43a45000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe43670000 - 0x00007ffe4372d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe410c0000 - 0x00007ffe41388000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe41580000 - 0x00007ffe41680000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe38220000 - 0x00007ffe38235000 	D:\Anaconda3\envs\tensorflow\VCRUNTIME140.dll
+0x00000000567a0000 - 0x0000000056b43000 	D:\Anaconda3\envs\tensorflow\python36.dll
+0x00007ffe41950000 - 0x00007ffe419a5000 	C:\WINDOWS\System32\SHLWAPI.dll
+0x00007ffe42b70000 - 0x00007ffe42c0e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe3b070000 - 0x00007ffe3b07a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe437a0000 - 0x00007ffe4380b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffe429e0000 - 0x00007ffe42b0b000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe427b0000 - 0x00007ffe4285c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe430b0000 - 0x00007ffe4314b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe40870000 - 0x00007ffe40888000 	C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+0x00007ffe40040000 - 0x00007ffe40074000 	C:\WINDOWS\system32\rsaenh.dll
+0x00007ffe41720000 - 0x00007ffe41747000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffe40890000 - 0x00007ffe4089c000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+0x00007ffe40ff0000 - 0x00007ffe41070000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffe385d0000 - 0x00007ffe385df000 	D:\Anaconda3\envs\tensorflow\python3.dll
+0x0000000056780000 - 0x0000000056798000 	D:\Anaconda3\envs\tensorflow\DLLs\_bz2.pyd
+0x00007ffe331c0000 - 0x00007ffe33201000 	D:\Anaconda3\envs\tensorflow\DLLs\_lzma.pyd
+0x00007ffe28f80000 - 0x00007ffe29122000 	D:\Anaconda3\envs\tensorflow\DLLs\_hashlib.pyd
+0x00007ffe42c10000 - 0x00007ffe42db0000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe41390000 - 0x00007ffe413b2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe41a90000 - 0x00007ffe41aba000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe413c0000 - 0x00007ffe414cb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe41680000 - 0x00007ffe4171d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe42650000 - 0x00007ffe42680000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000000056750000 - 0x0000000056773000 	D:\Anaconda3\envs\tensorflow\DLLs\_ctypes.pyd
+0x00007ffe42680000 - 0x00007ffe427aa000 	C:\WINDOWS\System32\ole32.dll
+0x00007ffe422e0000 - 0x00007ffe42635000 	C:\WINDOWS\System32\combase.dll
+0x00007ffe42e30000 - 0x00007ffe42efd000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x000000006df40000 - 0x000000006fbc8000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\.libs\libopenblas.PYQHXLVVQ7VESDPUVUADXEVJOBGHJPAY.gfortran-win_amd64.dll
+0x00007ffe20b00000 - 0x00007ffe20db7000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\core\_multiarray_umath.cp36-win_amd64.pyd
+0x00007ffe38200000 - 0x00007ffe3821f000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\core\_multiarray_tests.cp36-win_amd64.pyd
+0x00007ffe384a0000 - 0x00007ffe384ab000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\linalg\lapack_lite.cp36-win_amd64.pyd
+0x00007ffe37d40000 - 0x00007ffe37d66000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\linalg\_umath_linalg.cp36-win_amd64.pyd
+0x0000000056700000 - 0x0000000056744000 	D:\Anaconda3\envs\tensorflow\DLLs\_decimal.pyd
+0x00007ffe381e0000 - 0x00007ffe38200000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\fft\_pocketfft_internal.cp36-win_amd64.pyd
+0x00007ffe31e60000 - 0x00007ffe31ef1000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\random\mtrand.cp36-win_amd64.pyd
+0x00007ffe364e0000 - 0x00007ffe3650b000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\random\_bit_generator.cp36-win_amd64.pyd
+0x00007ffe32da0000 - 0x00007ffe32dd0000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\random\_common.cp36-win_amd64.pyd
+0x00007ffe31e10000 - 0x00007ffe31e5a000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\random\_bounded_integers.cp36-win_amd64.pyd
+0x00007ffe32d80000 - 0x00007ffe32d9d000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\random\_mt19937.cp36-win_amd64.pyd
+0x00007ffe32a10000 - 0x00007ffe32a28000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\random\_philox.cp36-win_amd64.pyd
+0x00007ffe32640000 - 0x00007ffe32656000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\random\_pcg64.cp36-win_amd64.pyd
+0x00007ffe2a320000 - 0x00007ffe2a333000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\random\_sfc64.cp36-win_amd64.pyd
+0x00007ffe2a270000 - 0x00007ffe2a315000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\random\_generator.cp36-win_amd64.pyd
+0x00007ffe28ec0000 - 0x00007ffe28f72000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\matplotlib\ft2font.cp36-win_amd64.pyd
+0x00007ffe28e20000 - 0x00007ffe28ebd000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\matplotlib\MSVCP140.dll
+0x00007ffe2a240000 - 0x00007ffe2a268000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\kiwisolver.cp36-win_amd64.pyd
+0x00000000566e0000 - 0x00000000566f4000 	D:\Anaconda3\envs\tensorflow\DLLs\_socket.pyd
+0x00000000566d0000 - 0x00000000566d9000 	D:\Anaconda3\envs\tensorflow\DLLs\select.pyd
+0x00007ffe28d80000 - 0x00007ffe28dad000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\matplotlib\_path.cp36-win_amd64.pyd
+0x00000000565f0000 - 0x00000000566ce000 	D:\Anaconda3\envs\tensorflow\DLLs\unicodedata.pyd
+0x00007ffe28d50000 - 0x00007ffe28d7e000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\matplotlib\_image.cp36-win_amd64.pyd
+0x00007ffe28170000 - 0x00007ffe281a6000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\matplotlib\backends\_backend_agg.cp36-win_amd64.pyd
+0x00000000565b0000 - 0x00000000565e5000 	D:\Anaconda3\envs\tensorflow\DLLs\_elementtree.pyd
+0x00007ffe28130000 - 0x00007ffe28162000 	D:\Anaconda3\envs\tensorflow\DLLs\pyexpat.pyd
+0x00007ffe14cf0000 - 0x00007ffe14f5f000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\PIL\_imaging.cp36-win_amd64.pyd
+0x00007ffe280f0000 - 0x00007ffe28130000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\conversion.cp36-win_amd64.pyd
+0x00007ffe280b0000 - 0x00007ffe280ec000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\c_timestamp.cp36-win_amd64.pyd
+0x00007ffe27540000 - 0x00007ffe27573000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\nattype.cp36-win_amd64.pyd
+0x00007ffe27510000 - 0x00007ffe2753d000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\missing.cp36-win_amd64.pyd
+0x00007ffe29520000 - 0x00007ffe29531000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\np_datetime.cp36-win_amd64.pyd
+0x00007ffe294b0000 - 0x00007ffe294c2000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\ops_dispatch.cp36-win_amd64.pyd
+0x00007ffe268a0000 - 0x00007ffe268d6000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\timezones.cp36-win_amd64.pyd
+0x00007ffe26230000 - 0x00007ffe2626f000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\tzconversion.cp36-win_amd64.pyd
+0x00007ffe261c0000 - 0x00007ffe26226000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\timedeltas.cp36-win_amd64.pyd
+0x00007ffe26160000 - 0x00007ffe261ba000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\offsets.cp36-win_amd64.pyd
+0x00007ffe26880000 - 0x00007ffe26893000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\ccalendar.cp36-win_amd64.pyd
+0x00007ffe25150000 - 0x00007ffe251a4000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\strptime.cp36-win_amd64.pyd
+0x00007ffe236b0000 - 0x00007ffe236ec000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\fields.cp36-win_amd64.pyd
+0x00007ffe23650000 - 0x00007ffe236a6000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\parsing.cp36-win_amd64.pyd
+0x00007ffe22f30000 - 0x00007ffe22f52000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\frequencies.cp36-win_amd64.pyd
+0x00007ffe22e20000 - 0x00007ffe22e81000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\period.cp36-win_amd64.pyd
+0x00007ffe22d90000 - 0x00007ffe22dd2000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\timestamps.cp36-win_amd64.pyd
+0x00007ffe22ef0000 - 0x00007ffe22f2a000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs\resolution.cp36-win_amd64.pyd
+0x00007ffe22d00000 - 0x00007ffe22d89000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\hashtable.cp36-win_amd64.pyd
+0x00007ffe22c80000 - 0x00007ffe22cf8000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\lib.cp36-win_amd64.pyd
+0x00007ffe22c30000 - 0x00007ffe22c75000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslib.cp36-win_amd64.pyd
+0x00007ffe223b0000 - 0x00007ffe224d3000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\interval.cp36-win_amd64.pyd
+0x00007ffe14ba0000 - 0x00007ffe14ce5000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\algos.cp36-win_amd64.pyd
+0x00007ffe26140000 - 0x00007ffe26154000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\properties.cp36-win_amd64.pyd
+0x00007ffe22c00000 - 0x00007ffe22c2c000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\hashing.cp36-win_amd64.pyd
+0x00007ffe229a0000 - 0x00007ffe229d4000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\ops.cp36-win_amd64.pyd
+0x00007ffe228c0000 - 0x00007ffe2294b000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\index.cp36-win_amd64.pyd
+0x00007ffe149b0000 - 0x00007ffe14b9d000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\join.cp36-win_amd64.pyd
+0x00007ffe20a20000 - 0x00007ffe20af3000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\sparse.cp36-win_amd64.pyd
+0x00007ffe38190000 - 0x00007ffe381a0000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\indexing.cp36-win_amd64.pyd
+0x00007ffe227e0000 - 0x00007ffe22813000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\writers.cp36-win_amd64.pyd
+0x00007ffe227a0000 - 0x00007ffe227dc000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\internals.cp36-win_amd64.pyd
+0x00007ffe22760000 - 0x00007ffe2279f000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\reshape.cp36-win_amd64.pyd
+0x00007ffe225e0000 - 0x00007ffe2263a000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\window\aggregations.cp36-win_amd64.pyd
+0x00007ffe225b0000 - 0x00007ffe225db000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\window\indexers.cp36-win_amd64.pyd
+0x00007ffe1f240000 - 0x00007ffe1f333000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\groupby.cp36-win_amd64.pyd
+0x00007ffe20640000 - 0x00007ffe20690000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\reduction.cp36-win_amd64.pyd
+0x00007ffe1f960000 - 0x00007ffe1f9d2000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\parsers.cp36-win_amd64.pyd
+0x00007ffe22be0000 - 0x00007ffe22bf4000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\json.cp36-win_amd64.pyd
+0x00007ffe22980000 - 0x00007ffe22996000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\testing.cp36-win_amd64.pyd
+0x00007ffe13360000 - 0x00007ffe13571000 	D:\Anaconda3\envs\tensorflow\DLLs\_ssl.pyd
+0x00007ffe41750000 - 0x00007ffe418af000 	C:\WINDOWS\System32\CRYPT32.dll
+0x00007ffe15740000 - 0x00007ffe157c6000 	D:\Anaconda3\envs\tensorflow\lib\site-packages\_jpype.cp36-win_amd64.pyd
+0x00007ffe11440000 - 0x00007ffe11f5e000 	C:\Program Files\Java\jdk-14.0.1\bin\server\jvm.dll
+0x00007ffe43730000 - 0x00007ffe43738000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe3c960000 - 0x00007ffe3c969000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe31a10000 - 0x00007ffe31a37000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe38110000 - 0x00007ffe3811a000 	C:\Program Files\Java\jdk-14.0.1\bin\jimage.dll
+0x00007ffe3b0d0000 - 0x00007ffe3b2b4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffe3b080000 - 0x00007ffe3b0ac000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffe22520000 - 0x00007ffe22545000 	C:\Program Files\Java\jdk-14.0.1\bin\java.dll
+0x00007ffe22390000 - 0x00007ffe223a6000 	C:\Program Files\Java\jdk-14.0.1\bin\zip.dll
+0x00007ffe3ee20000 - 0x00007ffe3ee32000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;D:\Anaconda3\envs\tensorflow;C:\WINDOWS\SYSTEM32;D:\Anaconda3\envs\tensorflow\DLLs;D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\.libs;D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\core;D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\linalg;D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\fft;D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\random;D:\Anaconda3\envs\tensorflow\lib\site-packages\matplotlib;D:\Anaconda3\envs\tensorflow\lib\site-packages;D:\Anaconda3\envs\tensorflow\lib\site-packages\matplotlib\backends;D:\Anaconda3\envs\tensorflow\lib\site-packages\PIL;D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\tslibs;D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs;D:\Anaconda3\envs\tensorflow\lib\site-packages\pandas\_libs\window;C:\Program Files\Java\jdk-14.0.1\bin\server;C:\Program Files\Java\jdk-14.0.1\bin
+
+VM Arguments:
+jvm_args: -Xms512m -Xmx8g 
+java_command: <unknown>
+java_class_path (initial): D:\Anaconda3\envs\tensorflow\lib\site-packages\pyhanlp\static\hanlp-1.7.8.jar;D:\Anaconda3\envs\tensorflow\lib\site-packages\pyhanlp\static
+Launcher Type: generic
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 6                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 536870912                                 {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 8589934592                                {product} {command line}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 536870912                                 {product} {command line}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 8589934592                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-14.0.1
+CLASSPATH=.;C:\Program Files\Java\jdk-14.0.1\lib;C:\Program Files\Java\jdk-14.0.1\lib\tools.jar;C:\Program Files\Java\jdk-14.0.1\lib\dt.jar
+PATH=D:\Anaconda3\envs\tensorflow\lib\site-packages\pywin32_system32;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Windows\SysWOW64;C:\Program Files\Java\jdk-14.0.1\bin;C:\Program Files\Java\jdk-14.0.1\jre\bin;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\Anaconda3;D:\Anaconda3\Library\mingw-w64\bin;D:\Anaconda3\Library\usr\bin;D:\Anaconda3\Library\bin;D:\Anaconda3\Scripts;C:\Users\dell\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\dell\AppData\Local\Programs\Python\Python36\;C:\Users\dell\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\dell\AppData\Local\Programs\Python\Python38\;C:\Users\dell\AppData\Local\Microsoft\WindowsApps;D:\software\pycharm\PyCharm 2020.1.1\bin;;D:\software\idea\IntelliJ IDEA 2020.1.1\bin;;D:\software\jdk11.0.1\bin;;D:\Anaconda3\envs\tensorflow\lib\site-packages\numpy\.libs
+USERNAME=dell
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.928)
+OS uptime: 6 days 17:00 hours
+
+CPU:total 6 (initial active 6) (6 cores per cpu, 1 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 8015M (2497M free)
+TotalPageFile size 14159M (AvailPageFile size 2M)
+current process WorkingSet (physical memory assigned to process): 79M, peak: 79M
+current process commit charge ("private bytes"): 790M, peak: 793M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (14.0.1+7) for windows-amd64 JRE (14.0.1+7), built on Mar  5 2020 10:30:14 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.

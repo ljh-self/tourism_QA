@@ -1,0 +1,6 @@
+类型,类别,样式,种类 type
+级别,等级 level
+地点,地址,地方,位置,哪,哪里 address
+开放时间 opentime
+景点 name
+描述 description

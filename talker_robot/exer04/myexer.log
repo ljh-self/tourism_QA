@@ -1,0 +1,22 @@
+2020-08-18 16:41:44,046 - DEBUG: Building prefix dict from the default dictionary ...
+2020-08-18 16:41:44,048 - DEBUG: Loading model from cache C:\Users\dell\AppData\Local\Temp\jieba.cache
+2020-08-18 16:41:44,618 - DEBUG: Loading model cost 0.572 seconds.
+2020-08-18 16:41:44,618 - DEBUG: Prefix dict has been built successfully.
+2020-08-18 16:41:44,671 - WARNING: POST http://119.3.65.142:9200/qa/qaexer/_search [status:404 request:0.036s]
+2020-08-18 16:42:41,746 - DEBUG: Building prefix dict from the default dictionary ...
+2020-08-18 16:42:41,749 - DEBUG: Loading model from cache C:\Users\dell\AppData\Local\Temp\jieba.cache
+2020-08-18 16:42:42,337 - DEBUG: Loading model cost 0.591 seconds.
+2020-08-18 16:42:42,337 - DEBUG: Prefix dict has been built successfully.
+2020-08-18 16:42:51,106 - WARNING: POST http://119.3.65.142:9200/qa/qaexer/_search [status:404 request:0.041s]
+2020-08-18 16:49:35,770 - DEBUG: Building prefix dict from the default dictionary ...
+2020-08-18 16:49:35,771 - DEBUG: Loading model from cache C:\Users\dell\AppData\Local\Temp\jieba.cache
+2020-08-18 16:49:36,334 - DEBUG: Loading model cost 0.563 seconds.
+2020-08-18 16:49:36,334 - DEBUG: Prefix dict has been built successfully.
+2020-08-18 16:49:36,380 - WARNING: POST http://119.3.65.142:9200/qa/qaexer/_search [status:404 request:0.046s]
+2020-08-18 16:58:02,821 - DEBUG: Building prefix dict from the default dictionary ...
+2020-08-18 16:58:02,822 - DEBUG: Loading model from cache C:\Users\dell\AppData\Local\Temp\jieba.cache
+2020-08-18 16:58:03,380 - DEBUG: Loading model cost 0.560 seconds.
+2020-08-18 16:58:03,380 - DEBUG: Prefix dict has been built successfully.
+2020-08-18 16:58:03,434 - INFO: POST http://119.3.65.142:9200/qa/qaexer01/_search [status:200 request:0.052s]
+2020-08-18 16:58:03,482 - INFO: POST http://119.3.65.142:9200/qa/qaexer01/_search [status:200 request:0.048s]
+2020-08-18 16:58:13,012 - INFO: POST http://119.3.65.142:9200/qa/qaexer01/_search [status:200 request:0.043s]
